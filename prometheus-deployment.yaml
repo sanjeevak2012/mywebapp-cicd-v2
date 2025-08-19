@@ -54,3 +54,8 @@ spec:
       port: 9090
       targetPort: 9090
   type: NodePort
+
+scrape_configs:
+  - job_name: 'flask_app'
+    static_configs:
+      - targets: ['<your-service-name>:80']
